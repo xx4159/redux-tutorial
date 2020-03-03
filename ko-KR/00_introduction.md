@@ -113,5 +113,5 @@ flux와 flux의 단방향 데이터 흐름을 이용하면 위 예제는 아래�
 
 <!-- Go to next tutorial: 01_simple-action-creator.js -->
 
-다음: [01_simple-action-creator.md](./01_simple-action-creator)
+다음: [01_simple-action-creator.md](./01_simple-action-creator.md)
 
