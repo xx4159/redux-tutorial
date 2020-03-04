@@ -28,7 +28,7 @@ var actionCreator = function() {
 ```
 
 <!-- So is that all? yes. -->
-이게 전부라고? ~~응~~ 네.
+이게 전부다.
 
 <!-- However, one thing to note is the format of the action. This is kind of a convention in flux that the action is an object that contains a "type" property. This type allows for further handling of the action. Of course, the action can also contain other properties to pass any data you want. -->
 
