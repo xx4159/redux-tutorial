@@ -99,7 +99,7 @@ basically data can arrive from a lot of places and be changed by a lot of source
 
 flux와 flux의 단방향 데이터 흐름을 이용하면 위 예제는 아래와 같아진다:
 1) 사용자가 버튼 "A" 를 클릭한다
-2) 버튼 "A" 에 등록되어있는 클릭 이벤트를 받은 action을 트리거하고 Store "A"에 변경사항을 보낸다
+2) 버튼 "A" 에 등록되어있는 클릭 이벤트를 받은 action을 트리거하고 Store "A"에 변경사항을 보낸다
 3) 다른 store들도 action에 대한 알림을 받기떄문에, Store "B"도 같은 action에 반응할 수 있다
 4) 뷰 "B"는 Store "A"와 "B"의 변경사항에 대해 알림을 받고 다시 렌더링한다
 
