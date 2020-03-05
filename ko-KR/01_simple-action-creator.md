@@ -32,9 +32,9 @@ var actionCreator = function() {
 
 <!-- However, one thing to note is the format of the action. This is kind of a convention in flux that the action is an object that contains a "type" property. This type allows for further handling of the action. Of course, the action can also contain other properties to pass any data you want. -->
 
-그치만 주의할것이 action의 포맷이다. flux에서 컨변션 중 하나이다.
+그치만 주의할것이 action의 포맷이다. flux에서의 컨벤션 중 하나이다.
 action은 "type" 프로퍼티를 갖고있는다. 이게 나중에 action을 핸들링한다.
-물론 다른 프로퍼티도 가지고 원하는 데이터를 넘길 수 있다.
+물론 다른 프로퍼티도 가질 수 있고 원하는 데이터를 넘길 수 있다.
 
 <!-- We'll also see later that the action creator can actually return something other than an action,
 like a function. This will be extremely useful for async action handling (more on that
@@ -66,7 +66,7 @@ And to let anyone interested know that an action happened, we need a mechanism t
 we'll see in the next section how they are called in Redux. -->
 
 action을 dispatch 하기위해서는... dispatch 함수가
-그리고 누군가가 action이 발생했다는것을 알게하려면, 핸들러를 등록할 방법이 필요하다. flux 애플리케이션에서 action에 등록할 그런 핸들러들은 store 라고 불려지고 Redux에서는 어떻게 불려지는지 다음에 알아보자.
+그리고 누군가가 action이 발생했다는것을 알게하려면, 핸들러를 등록할 방법이 필요하다. flux 애플리케이션에서 action에 등록할 그런 "핸들러"들은 store 라고 불려지고 Redux에서는 어떻게 불려지는지 다음에 알아보자.
 
 <!-- So far here is the flow of our application:
 ActionCreator -> Action -->

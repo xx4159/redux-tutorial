@@ -10,7 +10,7 @@ flux concepts that I am starting to grasp, focusing on the use of Redux.
 ## 이 글을 쓰는 이유.
 Redux를 공부하던중에 내가 flux 글을 잘못 읽고 있었음을 깨달았다. 그 글이 잘못됐다는건 아니고 내가 잘못 이해하고 있었다. 내가 다른 flux 프레임워크 문서를 읽으면서 개념들을 이해하려하고 있었던것이다.
 
-Redux를 사용하기 시작하면서 flux 가 생각보다 단순하다는 것을 깨달았다. 이건 전부 Redux가 되게 잘 설계되어있고 내가 해봤던 다른 다른 프레임워크에 비해 "anti-boilerplate features" 를 많이 걷어내어준 덕분이다. 다른 프레임워크에비해 Redux는 flux에 대해 알기 쉽다. 그래서 Redux에 초점을 두고 flux 개념에 대해 내가 배울 것들을 공유하려고 한다.
+Redux를 사용하기 시작하면서 flux 가 생각보다 단순하다는 것을 깨달았다. 이건 전부 Redux가 되게 잘 설계되어있고 내가 해봤던 다른 다른 프레임워크에 비해 "anti-boilerplate features" 를 많이 걷어내어준 덕분이다. 다른 프레임워크에비해 Redux는 flux에 대해 알기 쉽다. 그래서 Redux에 초점을 두고 flux 개념에 대해 내가 이해하기 시작한 내용들을 공유하려고 한다.
 
 <!-- You may have seen this diagram representing the famous unidirectional data flow of a flux application: -->
 
@@ -41,8 +41,8 @@ Redux를 사용하기 시작하면서 flux 가 생각보다 단순하다는 것�
 <!-- In this tutorial we'll gradually introduce you to concepts of the diagram above. But instead of trying to explain this complete diagram and the overall flow it describes, we'll take each piece separately and try to understand why it exists and what role it plays. In the end you'll see that this diagram makes perfect sense
 once we understand each of its parts. -->
 
-이번 튜토리얼에선 위 다이어그램의 개념을 알고보자.
-일단 전체 흐름을 알기 전에 각 부분들이 왜 필요하고 무슨 열할을 하는지 알고나면 이 다이어그램을 완벽하게 이해할 수 있을것이다.
+이번 튜토리얼에선 위 다이어그램의 개념을 알아보자.
+일단 전체 흐름을 알기 전에 각 부분들이 왜 필요하고 무슨 역할을 하는지 알고나면 이 다이어그램을 완벽하게 이해할 수 있을것이다.
 
 <!-- But before we start, let's talk a little bit about why flux exists and why we need it...
 Let's pretend we're building a web application. What are all web applications made of?
@@ -100,7 +100,7 @@ basically data can arrive from a lot of places and be changed by a lot of source
 flux와 flux의 단방향 데이터 흐름을 이용하면 위 예제는 아래와 같아진다:
 1) 사용자가 버튼 "A" 를 클릭한다
 2) 버튼 "A" 에 등록되어있는 클릭 이벤트를 받은 action을 트리거하고 Store "A"에 변경사항을 보낸다
-3) 다른 store들도 action에 대한 알림을 받기떄문에, Store "B"도 같은 action에 반응할 수 있다
+3) 다른 store들도 action에 대한 알림을 받기때문에, Store "B"도 같은 action에 반응할 수 있다
 4) 뷰 "B"는 Store "A"와 "B"의 변경사항에 대해 알림을 받고 다시 렌더링한다
 
 <!-- See how we avoid directly linking Store A to Store B? Each store can only be modified by an action and nothing else. And once all stores have replied to an action, views can finally update. So in the end, data always flows in one way: action -> store -> view -> action -> store -> view -> action -> ... -->
@@ -109,7 +109,7 @@ flux와 flux의 단방향 데이터 흐름을 이용하면 위 예제는 아래�
 
 <!-- Just as we started our use case above from an action, let's start our tutorial with actions and action creators. -->
 
-위에서 action을 예제로 시작했던것 처럼 action creator 에 대해서도 알아보자.
+위에서 action을 예제로 시작해보았는데 이것처럼 action creator 에 대해서도 알아보자.
 
 <!-- Go to next tutorial: 01_simple-action-creator.js -->
 
