@@ -70,7 +70,7 @@ Let's pretend we're building a web application. What are all web applications ma
 <!-- So is flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing these new terms we are now able to express more precisely things that were regrouped under various terminologies... For example, isn't a data fetch an action? Just like a click is also an action?
 And a change in an input is an action too... Then we're all already used to issuing actions from our applications, we were just calling them differently. And instead of having handlers for those actions directly modify Models or Views, flux ensures all actions go first through something called a dispatcher, then through our stores, and finally all watchers of stores are notified. -->
 
-flux의 새로운 어휘들이 문제가 되진않지만 다양한 용어들로 재정의된것들을 더 정확하게 표현할 수 있는 새로운 용어이기 때문에 중요하다. 예를들어, 데이터를 가져오는게 액션일까? 그냥 클릭하는것도 액션일가? 인풋이 바뀌는것도 액션인가?... 그렇다면 우린 앱에서 액션을 이미 사용해보았다. 우린 그저 그것을 다르게 해봤을 뿐이다. 그리고 모델이나 뷰를 직접 수정하는 액션 핸들러 대신에 flux는 액션을 맨 처음 dispatcher 라고 불리우는 것을 통해서 가게 하고 그런 다음 stores, 그리고 stores를 바라보고있던 것들은 알림을 받는다.
+그렇다고 flux의 새로운 어휘들이 문제일까? 아니, 하지만 중요하다. 다양한 용어들로 재정의된것들을 더 정확하게 표현할 수 있는 새로운 용어이기 때문이다. 예를들어, 데이터를 가져오는게 액션일까? 그냥 클릭하는것도 액션일가? 인풋이 바뀌는것도 액션인가?... 그렇다면 우린 앱에서 액션을 이미 사용해보았다. 우린 그저 그것을 다르게 해봤을 뿐이다. 그리고 모델이나 뷰를 직접 수정하는 액션 핸들러 대신에 flux는 액션을 맨 처음 dispatcher 라고 불리우는 것을 통해 전달하고 그런 다음 stores, 그리고 stores를 바라보고있던 것들은 알림을 받는다.
 
 <!-- To get more clarity how MVC and flux differ, we'll take a classic use-case in an MVC application:
 In a classic MVC application you could easily end up with:
@@ -89,7 +89,7 @@ MVC 애플리케이션에서는:
 <!-- Finding the source of a bug in such an environment when something goes wrong can become quite challenging very quickly. This is because every View can watch every Model, and every Model can watch other Models, so
 basically data can arrive from a lot of places and be changed by a lot of sources (any views or any models). -->
 
-이런 환경에서 버그를 찾긴 어렵다. 왜냐면 뷰는 모든 모델을 바라볼 수 있고, 모든 모델은 다른 모델을 바라볼 수 있어서 데이터는 많은 곳에 있을 수 있고 많은 곳(모델이 될수도 뷰가 될 수도 있다)에서 영향을 받을 수 있다.
+이런 환경에서 버그를 찾긴 어렵다. 왜냐면 뷰는 모든 모델을 바라볼 수 있고, 모든 모델은 다른 모델을 바라볼 수 있어서 데이터는 여러 곳에서 유입되고 많은 곳(모델이 될수도 뷰가 될 수도 있다)에서 영향을 받을 수 있다.
 
 <!-- Whereas when using flux and its unidirectional data flow, the example above could become:
 1) user clicks on button "A"
@@ -105,11 +105,11 @@ flux와 flux의 단방향 데이터 흐름을 이용하면 위 예제는 아래�
 
 <!-- See how we avoid directly linking Store A to Store B? Each store can only be modified by an action and nothing else. And once all stores have replied to an action, views can finally update. So in the end, data always flows in one way: action -> store -> view -> action -> store -> view -> action -> ... -->
 
-어떤식으로 Store A에서 Store B로 직접 연결하지 않았는지 알 수 있었다. 각각의 store는 오직 action에 의해서만 수정될 수 있고 한번 action에 의해서 반응하기만하면, 뷰들은 업데이트된다. 결국 데이터는 단방향으로 흐르게 된다: action -> store -> view -> action -> store -> view -> action -> ...
+어떻게 Store A에서 Store B로 직접 연결하지 않았는지 알 수 있었다. 각각의 store는 오직 action에 의해서만 수정될 수 있고 한번 action에 의해서 반응하기만하면, 뷰들은 업데이트된다. 결국 데이터는 단방향으로 흐르게 된다: action -> store -> view -> action -> store -> view -> action -> ...
 
 <!-- Just as we started our use case above from an action, let's start our tutorial with actions and action creators. -->
 
-위에서 action을 예제로 시작해보았는데 이것처럼 action creator 에 대해서도 알아보자.
+위에서 action을 예제로 시작해보았던 것처럼 action creator 에 대해서도 알아보자.
 
 <!-- Go to next tutorial: 01_simple-action-creator.js -->
 

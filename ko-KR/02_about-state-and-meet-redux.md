@@ -11,7 +11,7 @@ Where do I keep all the data regarding my application along its lifetime?
 How do I handle modification of such data?
 How do I propagate modifications to all parts of my application? -->
 
-이건 우리 앱에서 꾀 큰 문제다. 애플리케이션이 떠있는 동안 그 데이터은 어디에 보관해야할까?
+이건 우리 앱에서 꽤 큰 문제다. 애플리케이션이 떠있는 동안 그 데이터은 어디에 보관해야할까?
 어떻게 데이터를 수정할까?
 어떻게 그 변경사항들을 내 애플리케이션 곳곳에 전파시킬까?
 
@@ -39,7 +39,7 @@ How do I handle data modifications?
 How do I propagate modifications to all parts of my application?
     Using subscribers to state's modifications. -->
 
-애플리케이션이 떠있는 동안 그 데이터은 어디에 보관해야할까?
+애플리케이션이 떠있는 동안 그 데이터는 어디에 보관해야할까?
 - 원하는 곳에 저장한다 (자바스크립트 object, array, Immutable structure, ...).
 - 데이터는 상태라고 불려진다. 이건 우리 앱 내의 데이터들이 시간이 지남에 따라 진화하기 때문에 애플리케이션의 상태라고 얘기해도 무방하다.
 - 그런데 이걸 Redux에 넘길거다 (Redux는 "상태 컨테이너" 라고 했었다).
@@ -64,11 +64,11 @@ Redux 는 이 모든게 하나로 묶여있다.
 1. 애플리케이션 상태를 수정할 수 있도록 액션을 보내는 리듀서라는 것과
 1. 상태 갱신을 구독하는 장치를 제공한다.
 
-The Redux instance is called a store and can be created like this:
+<!-- The Redux instance is called a store and can be created like this:
 /*
     import { createStore } from 'redux'
     var store = createStore()
-*/
+*/ -->
 Redux 인스턴스는 상태라고 불려지고 이렇게 생성한다.
 ```javascript
 import { createStore } from 'redux'

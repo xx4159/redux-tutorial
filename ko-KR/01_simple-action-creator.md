@@ -58,7 +58,7 @@ anyone interested could know that something happened and could act accordingly.
 We call this process "Dispatching an action". -->
 
 작동하지만 이게 다다...
-우리가 필요한건 이 action이 어딘가로 보내져서 흥미를 갖고있는 누군가가 알게되고 그에따라 행동할 수 있게 하는거다. 우린 이걸 "action 을 Dispatch 한다" 고 말한다.
+우리는 이 action이 어딘가로 보내져서 관심을 갖고있는 누군가가 알게되고 그것에 맞춰서 행동할 수 있게 해야한다. 우린 이걸 "action 을 Dispatch 한다" 고 말한다.
 
 <!-- To dispatch an action we need... a dispatch function ("Captain obvious").
 And to let anyone interested know that an action happened, we need a mechanism to register
