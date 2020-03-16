@@ -183,7 +183,7 @@ console.log('초기화 이후 store_3 의 상태:', store_3.getState())
 1. 이런 패턴을 종종 보게될 것이다. 이 패턴들로 리듀서가 받은 액션에 따라 어떤 응답을 할지 선택한다.
 1. `switch`를 쓸 때, `default: return state` 를 꼭 써야한다. 만약 안쓰게되면, `undefined`를 리턴할 수도 있다. (그리고 상태를 잃어버린다.)
 1. 현재 상태값과 새로운 상태값 `{ message: action.value }`을 어떻게 합쳤는지 보면, 이건 전부 ES7(Object Spread) 덕분: `{ ...state, message: action.value }`
-1. 또한 ES7 Object Spread 는 우리 예제와 찰떡인 것이 `{ message: action.value }` 를 얕은 복사로 상태에 복사한다. (상태의 첫 번째 뎁스의 속성을 완전히 덮어쓴다) 하지만 만약 이보다 복잡한 깊은 데이터 구조였다면, 어떻게 상태를 갱신할 지 선택해야한다:
+1. 또한 ES7 Object Spread 는 우리 예제와 찰떡인 것이 `{ message: action.value }` 를 얕은 복사로 상태에 복사한다. (상태의 첫 번째 뎁스의 속성을 완전히 덮어쓴다) 하지만 만약 이보다 복잡한 깊은 데이터 구조였다면, 어떻게 상태를 갱신할 지 선택해야한다:
     - [Immutable.js](https://facebook.github.io/immutable-js/) 를 사용하거나
     - [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 을 사용하거나
     - 수동 머지를 하거나
@@ -191,7 +191,7 @@ console.log('초기화 이후 store_3 의 상태:', store_3.getState())
 
 <!-- Now that we're starting to handle actions in our reducer let's talk about having multiple reducers and combining them. -->
 
-reducer에서 액션을 다루어 보았으니 이제 여러개의 reducer들이 있고 그것들을 합쳐보는 것에 대해 얘기해보자.
+reducer에서 액션을 다루어 보았으니 이제 여러개의 reducer들이 있고 그것들을 합쳐보는 것에 대해 얘기해보자.
 
 <!-- Go to next tutorial: 05_combine-reducers.js -->
 다음: [05_combine-reducers.md](./05_combine-reducers.md)
