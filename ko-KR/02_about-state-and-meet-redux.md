@@ -11,7 +11,7 @@ Where do I keep all the data regarding my application along its lifetime?
 How do I handle modification of such data?
 How do I propagate modifications to all parts of my application? -->
 
-이건 우리 앱에서 꽤 큰 문제다. 애플리케이션이 떠있는 동안 그 데이터은 어디에 보관해야할까?
+이건 우리 앱에서 꽤 큰 문제다. 애플리케이션이 떠있는 동안 그 데이터는 어디에 보관해야할까?
 어떻게 데이터를 수정할까?
 어떻게 그 변경사항들을 내 애플리케이션 곳곳에 전파시킬까?
 
